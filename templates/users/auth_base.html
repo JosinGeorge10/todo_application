@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static 'css/auth-style.css' %}" />
+        <style>
+            header div.left h1 {
+            width: 100px;
+            }
+            header div.left h1 img {
+            display: block;
+            width: 100%;
+            }
+        </style>
+        <title>{{title}}</title>
+    </head>
+    <body>
+        <header>
+            <div class="left">
+                <a 
+                    ><h1>
+                        <img
+                            src="{% static 'images/img.jpg' %}"
+                            alt="logo"
+                        /></h1
+                ></a>
+            </div>
+        </header>
+        
+        <section class="container">
+            {% block content %}{% endblock %}
+        </section>
+    </body>
+</html>
