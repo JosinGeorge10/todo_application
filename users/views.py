@@ -165,10 +165,3 @@ def finish_task(request,id):
 
     return HttpResponseRedirect(reverse('web:index'))
 
-@login_required
-def revise_task(request,id):
-    instance = get_object_or_404(ToDo, id=id)
-    instance.is_completed=False
-    instance.save()
-
-    return HttpResponseRedirect(reverse('web:index'))
